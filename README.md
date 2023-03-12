@@ -28,12 +28,12 @@ may be a better service to provide a tree of EmployeeReportingStructure objects,
 ### Compensation Notes:
 
 1) Unlike ReportingStructure, Compensation has its own set of Compensation/money related services and has its own data and service.
-1) For Compensation, I decided to go with a one-to-many since that's usually the case and more interesting.
-Without something that enforces one Compensation per Employee, I decide to go with multiple. Another service
-endpoint or filter would have it only retrieve the current compensation value.
+1) For Compensation, I decided to go with a one-to-many since that's usually the case and more interesting. Also,
+there's no enforcement for having one Compensation per Employee. Another service endpoint or filter would have 
+it only retrieve the current compensation value.
 1) I created Compensation as a separate entity with its CompensationId as all entities that I've ever worked with have 
 their own unique id.  Perhaps this is not in line with this type of system. It associates with an existing EmployeeId.
-2) I resisted the urge to make Compensation be EmployeeCompensation as that is how it would be in the systems I've built.
+1) I resisted the urge to make Compensation be EmployeeCompensation as that is how it would be in the systems I've built.
 A good topic of conversation.
 
 ---
