@@ -1,3 +1,9 @@
+/*
+ * This class is a simple DTO that provides the container for the Compensation entity.
+ * More details are in CompensationService.
+ *
+ */
+
 package com.mindex.challenge.data;
 
 import java.math.BigDecimal;

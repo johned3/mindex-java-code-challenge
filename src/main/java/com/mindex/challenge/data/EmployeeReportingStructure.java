@@ -1,3 +1,10 @@
+/*
+ * This class is a simple DTO that provides the container for an Employee and their
+ * number of reports, where the Employee data will include the entire object
+ * graph of direct reports and their details.
+ *
+ */
+
 package com.mindex.challenge.data;
 
 public class EmployeeReportingStructure {

@@ -1,3 +1,7 @@
+/**
+ * Test cases for exercising the CompensationController endpoints.
+ */
+
 package com.mindex.challenge.service.impl;
 
 import com.mindex.challenge.data.Compensation;
@@ -51,6 +55,10 @@ public class CompensationServiceImplTest {
         compensationsByEmpIdUrl = "http://localhost:" + port + "/compensationsByEmployee/{id}";
     }
 
+    /**
+     * This tests standard CRUD on a Compensation record. It creates a new
+     * Employee to associate Compensation with.
+     */
     @Test
     public void testCreateReadUpdate() {
 
@@ -96,6 +104,10 @@ public class CompensationServiceImplTest {
         assertCompensationEquivalence(readCompensation, updatedCompensation);
     }
 
+    /**
+     * This will add a new Employee then two Compensation records to that Employee,
+     * and assert all saved and retrieved objects are present and have expected values.
+     */
     @Test
     public void testReadEmployeeCompensations() {
 
@@ -118,11 +130,13 @@ public class CompensationServiceImplTest {
                 restTemplate.postForEntity(compensationUrl, testCompensation2, Compensation.class).getBody();
         assertNotNull(createdCompensation2);
 
+        // Employee check
         EmployeeCompensations readEmployeeCompensations = restTemplate.getForEntity(
                 compensationsByEmpIdUrl, EmployeeCompensations.class, createdEmployee.getEmployeeId()).getBody();
         assertNotNull(readEmployeeCompensations);
         assertEmployeeEquivalence(readEmployeeCompensations.getEmployee(), testEmployee);
 
+        // Compensation records check
         for (Compensation compensation: readEmployeeCompensations.getCompensations()) {
 
             if(compensation.getCompensationId().equals(createdCompensation1.getCompensationId())) {

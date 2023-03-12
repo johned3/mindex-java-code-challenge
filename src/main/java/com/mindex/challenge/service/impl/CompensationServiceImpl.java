@@ -1,3 +1,8 @@
+/*
+ * See CompensationService interface for more information.
+ *
+ */
+
 package com.mindex.challenge.service.impl;
 
 import com.mindex.challenge.dao.CompensationRepository;

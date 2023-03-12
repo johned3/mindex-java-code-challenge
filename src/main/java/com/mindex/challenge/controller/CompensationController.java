@@ -1,3 +1,9 @@
+/*
+ * This class contains the endpoints that provide access to the CompensationService
+ * functionality.  See that interface for more details.
+ *
+ */
+
 package com.mindex.challenge.controller;
 
 import com.mindex.challenge.data.Compensation;

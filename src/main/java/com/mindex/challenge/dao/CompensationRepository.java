@@ -1,3 +1,9 @@
+/*
+ * This class is an extension of a MongoRespository with two find methods
+ * that magically work without implementation thanks to Spring and Mongo.
+ *
+ */
+
 package com.mindex.challenge.dao;
 
 import com.mindex.challenge.data.Compensation;

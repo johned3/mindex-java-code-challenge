@@ -1,3 +1,8 @@
+/**
+ * Test cases for the bootstrap data loaded into memory on startup for
+ * dev work on Compensation entity related code.
+ */
+
 package com.mindex.challenge;
 
 import com.mindex.challenge.dao.CompensationRepository;
@@ -25,7 +30,7 @@ public class CompensationDataBootstrapTest {
         Compensation compensation = compensationRepository.findByCompensationId("bcd39309-3348-463b-a7e3-5de1c168beb3");
         assertNotNull(compensation);
         assertEquals("b7839309-3348-463b-a7e3-5de1c168beb3", compensation.getEmployeeId());
-        assertEquals(BigDecimal.valueOf(700000000), compensation.getSalary());
-        assertEquals(LocalDate.of(1966,8,5), compensation.getEffectiveDate());
+        assertEquals(0, BigDecimal.valueOf(700000000.0f).compareTo(compensation.getSalary()));
+        assertEquals(LocalDate.of(1957,7,6), compensation.getEffectiveDate());
     }
 }

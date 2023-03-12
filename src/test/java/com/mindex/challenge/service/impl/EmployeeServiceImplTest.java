@@ -83,6 +83,10 @@ public class EmployeeServiceImplTest {
         assertEmployeeEquivalence(readEmployee, updatedEmployee);
     }
 
+    /**
+     * This creates three new Employees, assigns two as direct reports to
+     * the third, saves, retrieves, and verifies the reporting structure.
+     */
     @Test
     public void testReadEmployeeReportingStructure() {
 

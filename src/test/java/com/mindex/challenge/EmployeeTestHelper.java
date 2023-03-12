@@ -1,3 +1,7 @@
+/**
+ * Helper for Employee related code used by multiple dependent test classes.
+ */
+
 package com.mindex.challenge;
 
 import com.mindex.challenge.data.Employee;

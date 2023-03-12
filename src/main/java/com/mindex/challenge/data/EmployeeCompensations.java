@@ -1,3 +1,9 @@
+/*
+ * This class is a simple DTO that provides the container for an Employee
+ * and all of their Compensation records.
+ *
+ */
+
 package com.mindex.challenge.data;
 
 import java.util.List;
